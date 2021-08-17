@@ -1,0 +1,11 @@
+{
+  "name": "tasky",
+  "version": "1.0.0",
+  "description": "task manager Node.js Application utilizing mongoDB for data storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deval",
+  "license": "ISC"
+}
