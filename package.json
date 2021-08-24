@@ -1,18 +1,23 @@
 {
   "name": "tasky",
   "version": "1.0.0",
-  "type": "module", 
+  "type": "module",
   "description": "task manager Node.js Application utilizing mongoDB for data storage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src.index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "deval",
   "license": "ISC",
   "dependencies": {
     "@types/mongodb": "^4.0.7",
+    "express": "^4.17.1",
     "mongodb": "^4.1.0",
     "mongoose": "^5.13.7",
     "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
