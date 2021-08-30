@@ -11,17 +11,20 @@
   "author": "deval",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.6",
     "@types/mongodb": "^4.0.7",
     "@types/node": "^16.7.1",
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
-    "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.1.0",
     "mongoose": "^5.13.8",
+    "multer": "^1.4.3",
+    "sharp": "^0.29.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.12"
   }
 }

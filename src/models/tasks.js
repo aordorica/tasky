@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import validator from 'validator';
 
 const taskSchema = mongoose.Schema({
     description: {
@@ -16,6 +15,8 @@ const taskSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     }
+}, {
+    timestamps: true
 });
 
 const Task = new mongoose.model("Task", taskSchema);

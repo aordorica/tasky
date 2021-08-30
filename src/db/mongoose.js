@@ -1,6 +1,9 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
+import 'dotenv/config';
 
-mongoose.connect("mongodb://127.0.0.1:27017/tasky_app_api", {
+console.log('mongodb key', process.env.MONGODB_CONNECT_KEY);
+
+mongoose.connect(process.env.MONGODB_CONNECT_KEY, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,

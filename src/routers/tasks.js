@@ -7,9 +7,28 @@ const router = new express.Router()
 //______________________________________________________________        GET Task
 
 router.get('/tasks', auth, async (req, res) => {
+    const match =
+        req.query.completed === undefined
+            ? {}
+            : { completed: req.query.completed };
+
+    const sort = {}
+    
+    if (req.query.sortBy) {
+        const part = req.query.sortBy.split('_')
+        sort[part[0]] = part[1] === 'desc' ? -1 : 1
+    }
 
     try {
-        await req.user.populate('userTasks').execPopulate()
+        await req.user.populate({
+            path: 'userTasks',
+            match,
+            options: {
+                limit: parseInt(req.query.limit),
+                skip: parseInt(req.query.skip),
+                sort
+            }
+        }).execPopulate()
         res.status(201).send(req.user.userTasks)
     } catch (error) {
         res.status(404).send(error)
