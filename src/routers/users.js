@@ -49,10 +49,10 @@ router.get('/users/:id/avatar', async (req, res) => {
 // Create new User
 router.post("/users", async (req, res) => {
     const user = new User(req.body);
-    sendWelcomeEmail(user.email, user.name)
     try {
         await user.save();
         const token = await user.generateAuthToken()
+        sendWelcomeEmail(user.email, user.name)
         res.status(201).send({ user, token });
     } catch (error) {
         res.status(400).send(error);
