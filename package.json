@@ -5,7 +5,7 @@
   "description": "task manager Node.js Application utilizing mongoDB for data storage",
   "main": "index.js",
   "scripts": {
-    "start": "node src.index.js",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "author": "deval",
