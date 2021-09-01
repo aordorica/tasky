@@ -2,7 +2,6 @@
   "name": "tasky",
   "version": "1.0.0",
   "type": "module",
-  "description": "task manager Node.js Application utilizing mongoDB for data storage",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -10,7 +9,10 @@
     "test": "jest --watch"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/jest/setEnvVars.js"
+    ]
   },
   "author": "deval",
   "license": "ISC",
@@ -33,6 +35,7 @@
     "yarn": "^1.22.11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }
