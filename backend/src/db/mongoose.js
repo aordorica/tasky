@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import 'dotenv/config';
 
 console.log('mongodb key', process.env.MONGODB_CONNECT_KEY);
 

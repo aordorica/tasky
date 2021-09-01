@@ -6,23 +6,31 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js dotenv/config dotenv_config_path=.env.dev",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "deval",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@sendgrid/mail": "^7.4.6",
     "@types/mongodb": "^4.0.7",
     "@types/node": "^16.7.1",
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jest": "^27.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.1.0",
     "mongoose": "^5.13.8",
     "multer": "^1.4.3",
     "sharp": "^0.29.0",
-    "validator": "^13.6.0"
+    "validator": "^13.6.0",
+    "yarn": "^1.22.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

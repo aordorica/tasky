@@ -1,6 +1,8 @@
 import sendGrid from '@sendgrid/mail';
-import 'dotenv/config';
 import { env } from 'process';
+import path from 'path';
+import dotenv from "dotenv";
+// dotenv.config({ path: "../../.env.dev" });
 
 sendGrid.setApiKey(env.SENDGRID_API_KEY);
 
